@@ -1,0 +1,27 @@
+{
+    // Configuração do VSCode para esconder arquivos/pastas no Explorer
+    "files.exclude": {
+        // Oculta a pasta .git (controle de versão)
+        "**/.git": true,
+        // Oculta pasta .svn (controle de versão antigo)
+        "**/.svn": true,
+        // Oculta pasta .hg (Mercurial)
+        "**/.hg": true,
+        // Oculta pasta CVS (sistema de versionamento antigo)
+        "**/CVS": true,
+        // Oculta arquivo criado pelo macOS
+        "**/.DS_Store": true,
+        // Oculta arquivo criado pelo Windows
+        "**/Thumbs.db": true,
+        // Oculta arquivos compilados do Python (.pyc)
+        "**/*.pyc": {
+            // Só oculta quando existir o arquivo .py correspondente
+            // Exemplo: esconde arquivo.pyc se arquivo.py existir
+            "when": "$(basename).ext"
+        },
+        // Oculta cache do pytest
+        "**/.pytest_cache": true,
+        // Oculta pasta de cache do Python
+        "**/__pycache__": true
+    }
+}
